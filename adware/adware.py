@@ -1,5 +1,4 @@
 import os
-import sys
 import random
 from PIL import Image
 import webbrowser
