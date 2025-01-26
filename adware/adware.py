@@ -22,5 +22,5 @@ def main():
 	func()
 
 while True:
-	time.sleep(3)
+	time.sleep(300)
 	main()
